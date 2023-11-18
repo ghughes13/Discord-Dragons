@@ -1,0 +1,26 @@
+type Item {
+  itemID: ID
+  itemName: String
+  salePrice: Int
+  buyPrice: Int
+  attack: Int
+  defence: Int
+  quantity: Int
+  maxQuantity: Int
+  itemPlayerID: Player
+}
+
+type PlayerSkills {
+  skillPlayerID: Player
+  health: Int
+  attack: Int
+  defence: Int
+}
+
+type Player {
+  playerID: ID!
+  playerName: String
+  balance: Int
+  playerSkills: PlayerSkills
+  inventory: [Item]
+}
